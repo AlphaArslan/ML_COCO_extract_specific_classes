@@ -70,7 +70,7 @@ if __name__ == '__main__':
             train_file.write("data/obj/{}\n".format(img_name))
 
             # create text file for annotation
-            with open(os.path.splitext(DARKNET_FOLDER + "data/obj/" + img_name)[0]+".txt" , "w+") as fp:
+            with open(os.path.splitext(DARKNET_FOLDER + "data/obj/" + img_name)[0]+".txt" , "a+") as fp:
             	fp.write("{} {} {} {} {} \n".format(class_counter, a, b, c, d))
 
             image_counter += 1
